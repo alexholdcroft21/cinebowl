@@ -14,20 +14,3 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-
-
-.navbar_list{
-  list-style-type: none;
-  font-size: 32px;
-  line-height: 50px;
-  overflow: hidden;
-}
-
-.navbar_list a{
-  text-decoration: none;
-}
-
-::-webkit-scrollbar,
-*::-webkit-scrollbar {
-  display: none;
-}

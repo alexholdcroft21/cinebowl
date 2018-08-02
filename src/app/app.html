@@ -1,1 +1,23 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title><img src="assets/imgs/logo.jpg"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ul class="navbar_list">
+	  <li><a href="http://192.168.0.56:8120/#/home">Home</a></li>
+	  <li><a href="http://192.168.0.56:8119/#/cinema">Cinema</a></li>
+    <li><a href="http://192.168.0.56:8121/#/bowling">Bowling</a></li>
+    <li><a href="http://192.168.0.56:8122/#/ice">Ice Skating</a></li>
+    <li><a href="http://192.168.0.56:8123/#/contact">Contact Us</a></li>
+	  </ul>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
