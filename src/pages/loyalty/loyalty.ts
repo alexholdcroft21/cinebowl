@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-bowling',
-  templateUrl: 'bowling.html',
+  selector: 'page-loyalty',
+  templateUrl: 'loyalty.html',
 })
-export class BowlingPage {
+export class LoyaltyPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BowlingPage');
+    console.log('ionViewDidLoad LoyaltyPage');
   }
 
 }

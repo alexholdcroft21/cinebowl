@@ -1,11 +1,25 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    </ion-buttons>
+    <ion-title>Cinema</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
 
-</ion-content>
+    <ion-content padding>
+      <ion-card *ngFor="let item of items">
+          <img [src]="item.poster"/>
+            <ion-card-content>
+              <ion-card-title>
+                {{item.title}}
+              </ion-card-title>
+                <p>
+                {{item.description}}
+                </p>
+  </ion-card-content>
+</ion-card>
+    </ion-content>

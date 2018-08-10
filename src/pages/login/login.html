@@ -1,0 +1,30 @@
+
+
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button menuToggle hideBackButton>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list no-lines>
+    <ion-item>
+      <ion-input  round type="text" placeholder="Username" name="username" #username></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" placeholder="Password" name="password" #password ></ion-input>
+    </ion-item>
+
+    <button ion-button round block (click)="signIn()">Sign In</button>
+
+    <button ion-button round outline block (click)="signUp()">Register</button>
+    <button ion-button round block (click)="noLogin()">Maybe Some Other Time</button>
+
+  </ion-list>
+</ion-content>

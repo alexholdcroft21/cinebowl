@@ -15,19 +15,29 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-
-.navbar_list{
-  list-style-type: none;
-  font-size: 32px;
-  line-height: 50px;
-  overflow: hidden;
+ion-icon {
+&[class*="custom-"] {
+    margin: auto;
+    margin-bottom: 0px;
+    vertical-align: middle;
+    $sz: 20px;
+    width: $sz;
+    height: $sz;
+} // custom icons
+&[class*="cinema"] {
+    background: url(/assets/icon/cinema.svg) no-repeat 50% 50%;
+    background-size: contain;
 }
-
-.navbar_list a{
-  text-decoration: none;
+&[class*="bowling"] {
+    background: url(/assets/icon/bowling.svg) no-repeat 50% 50%;
+    background-size: contain;
 }
-
-::-webkit-scrollbar,
-*::-webkit-scrollbar {
-  display: none;
+&[class*="ice"] {
+    background: url(/assets/icon/ice.svg) no-repeat 50% 50%;
+    background-size: contain;
+  }
+  &[class*="loyalty"] {
+      background: url(/assets/icon/loyalty.svg) no-repeat 50% 50%;
+      background-size: contain;
+    }
 }

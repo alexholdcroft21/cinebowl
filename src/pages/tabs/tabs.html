@@ -1,7 +1,6 @@
-<ion-tabs>
-  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
-  <ion-tab [root]="tab2Root" tabTitle="Bowling" tabIcon="bowling"></ion-tab>
-  <ion-tab [root]="tab3Root" tabTitle="Cinema" tabIcon="cinema"></ion-tab>
-  <ion-tab [root]="tab4Root" tabTitle="Ice" tabIcon="ice"></ion-tab>
-  <ion-tab [root]="tab5Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>
+<ion-tabs [selectedIndex]="myIndex">
+  <ion-tab [root]="tab1Root" tabTitle="Cinema" tabIcon="custom-cinema"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Bowling" tabIcon="custom-bowling"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Ice Skating" tabIcon="custom-ice"></ion-tab>
+  <ion-tab [root]="tab4Root" tabTitle="Loyalty" tabIcon="custom-loyalty"></ion-tab>
 </ion-tabs>

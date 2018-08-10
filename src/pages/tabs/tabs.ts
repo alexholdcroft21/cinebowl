@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { ContactPage } from '../contact/contact';
-import { HomePage } from '../home/home';
-import { BowlingPage } from '../bowling/bowling';
-import { IcePage } from '../ice/ice';
-import { CinemaPage } from '../cinema/cinema';
-
+@IonicPage()
 @Component({
-  templateUrl: 'tabs.html'
+  selector: 'page-tabs',
+  templateUrl: 'tabs.html',
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
-  tab2Root = BowlingPage;
-  tab3Root = CinemaPage;
-  tab4Root = IcePage;
-  tab5Root = ContactPage;
+  tab1Root: any = 'CinemaPage';
+  tab2Root: any = 'BowlingPage';
+  tab3Root: any = 'IcePage';
+  tab4Root: any = 'LoyaltyPage';
+  tab5Root: any = 'LoginPage';
+  tab6Root: any = 'RegisterPage';
+  myIndex: number;
 
-  constructor() {
-
+  constructor(navParams: NavParams) {
+    // Set the active tab based on the passed index from menu.ts
+    this.myIndex = navParams.data.tabIndex || 0;
   }
 }

@@ -1,46 +1,45 @@
-import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { MyApp } from './app.component';
-
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
-import { BowlingPage } from '../pages/bowling/bowling';
-import { CinemaPage } from '../pages/cinema/cinema';
-import { IcePage } from '../pages/ice/ice';
-import { TabsPage } from '../pages/tabs/tabs';
-
-import { StatusBar } from '@ionic-native/status-bar';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { IonicStorageModule } from '@ionic/storage';
+
+import { MyApp } from './app.component';
+import { HomePage } from '../pages/home/home';
+import { RegisterPage } from '../pages/register/register';
+import { MenuPage } from '../pages/menu/menu';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
     MyApp,
-    ContactPage,
     HomePage,
-    BowlingPage,
-    CinemaPage,
-    IcePage,
-    TabsPage
+    RegisterPage,
+    MenuPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    HttpClientModule,
+    HttpModule,
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ContactPage,
     HomePage,
-    BowlingPage,
-    CinemaPage,
-    IcePage,
-    TabsPage
+    RegisterPage,
+    MenuPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
 export class AppModule {}
