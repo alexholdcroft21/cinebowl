@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -12,8 +12,6 @@ export class TabsPage {
   tab2Root: any = 'BowlingPage';
   tab3Root: any = 'IcePage';
   tab4Root: any = 'LoyaltyPage';
-  tab5Root: any = 'LoginPage';
-  tab6Root: any = 'RegisterPage';
   myIndex: number;
 
   constructor(navParams: NavParams) {

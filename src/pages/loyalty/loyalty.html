@@ -1,9 +1,7 @@
-
-
 <ion-header>
   <ion-navbar>
     <ion-buttons start>
-      <button ion-button menuToggle>
+      <button ion-button menuToggle hideBackButton>
       <ion-icon name="menu"></ion-icon>
     </button>
     </ion-buttons>
@@ -12,5 +10,18 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-list no-lines id="accountform" style="display: block;">
+    <ion-item>
+      <ion-input  round type="text" placeholder="Username" name="username" #username></ion-input>
+    </ion-item>
 
+    <ion-item>
+      <ion-input type="password" placeholder="Password" name="password" #password ></ion-input>
+    </ion-item>
+
+    <button ion-button round block (click)="signIn(0)">Sign In</button>
+    <button ion-button round outline block (click)="signUp()">Register</button>
+    <button ion-button round block (click)="noLoyalty(3)">Maybe Some Other Time</button>
+  </ion-list>
+  <button ion-button round outline block id="logoutbtn" style="display: block;"(click)="logout()">Logout</button>
 </ion-content>

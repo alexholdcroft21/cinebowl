@@ -1,9 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
-import { LoginPage } from '../login/login';
+import { LoyaltyPage } from '../loyalty/loyalty';
 import {Http, Headers, RequestOptions}  from "@angular/http";
 import { LoadingController } from 'ionic-angular';
-import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import 'rxjs/add/operator/map';
 
 
@@ -109,7 +108,7 @@ if(res=="Registration successfull"){
     });
 
     alert.present();
- this.navCtrl.push(LoginPage);
+ this.navCtrl.push(LoyaltyPage);
 
 }else
 {

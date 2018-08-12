@@ -1,4 +1,3 @@
-import { TabsPage } from './../tabs/tabs';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, Nav } from 'ionic-angular';
 
@@ -27,8 +26,6 @@ export class MenuPage {
     { title: 'Bowling', pageName: 'Tabs2Page', tabComponent: 'BowlingPage', index: 1, icon: '' },
     { title: 'Ice Skating', pageName: 'Tabs3Page', tabComponent: 'IcePage', index: 2, icon: '' },
     { title: 'Loyalty', pageName: 'Tabs4Page', tabComponent: 'LoyaltyPage', index: 3, icon: '' },
-    { title: 'Login', pageName: 'Tabs5Page', tabComponent: 'LoginPage', index: 4, icon: '' },
-    { title: 'Register', pageName: 'Tabs6Page', tabComponent: 'RegisterPage', index: 5, icon: '' },
   ];
 
   constructor(public navCtrl: NavController) { }

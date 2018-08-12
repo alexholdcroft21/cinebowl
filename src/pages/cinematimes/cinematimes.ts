@@ -2,31 +2,28 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient }  from "@angular/common/http";
 import { Observable } from 'rxjs/Observable';
-import { CinematimesPage } from '../cinematimes/cinematimes';
 /**
- * Generated class for the CinemaPage page.
+ * Generated class for the CinematimesPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
+
 @IonicPage()
 @Component({
-  selector: 'page-cinema',
-  templateUrl: 'cinema.html',
+  selector: 'page-cinematimes',
+  templateUrl: 'cinematimes.html',
 })
-export class CinemaPage {
+export class CinematimesPage {
 
   public items:any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
-    this.getData();
+        this.getData();
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CinemaPage');
+    console.log('ionViewDidLoad CinematimesPage');
   }
-
-
-
 
   getData(){
     let url = "http://www.cinebowl.co.uk/app/select.php";
@@ -35,10 +32,5 @@ export class CinemaPage {
       this.items = result;
     });
   }
-
-
-toggleTime(){
-  this.navCtrl.push(CinematimesPage);
-}
 
 }

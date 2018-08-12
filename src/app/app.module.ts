@@ -10,31 +10,32 @@ import { IonicStorageModule } from '@ionic/storage';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RegisterPage } from '../pages/register/register';
-import { MenuPage } from '../pages/menu/menu';
-import { LoginPage } from '../pages/login/login';
+import { MenuPageModule } from '../pages/menu/menu.module';
+import { CinematimesPage } from '../pages/cinematimes/cinematimes';
+import { LoyaltyPageModule} from '../pages/loyalty/loyalty.module';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     RegisterPage,
-    MenuPage,
-    LoginPage
+    CinematimesPage,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    MenuPageModule,
+    LoyaltyPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
     RegisterPage,
-    MenuPage,
-    LoginPage
+    CinematimesPage,
   ],
   providers: [
     StatusBar,
