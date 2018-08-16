@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    </ion-buttons>
+    <ion-title>Cinema</ion-title>
+  </ion-navbar>
+</ion-header>
+
+    <ion-content padding>
+      <ion-card *ngFor="let item of items" >
+          <img [src]="item.image_app"/>
+            <ion-card-content>
+              <ion-card-title style="text-align: center" >
+                {{item.film_title}}
+              </ion-card-title>
+              <input type="hidden" id="hiddenid" value="{{item.films_id}}">
+              <button ion-button round block (click)="toggleTime()">View Times</button>
+
+  </ion-card-content>
+</ion-card>
