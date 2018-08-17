@@ -1,0 +1,139 @@
+/*
+ * Globals
+ */
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #555;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+  background-color: #428bca;
+          width: 80%;
+          margin: auto;
+}
+
+/* Nav links */
+.blog-nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  color: #cdddeb;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.blog-nav li {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    float: right;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.blog-nav li a {
+    color: #fff;
+}
+.blog-nav img{
+  height: 5vh;
+  padding: 5px;
+  min-height: 50px;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+  color: #fff;
+}
+.blog-nav .active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-left: 5px solid transparent;
+}
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  width: 80%;
+  margin: auto;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.blog-footer li {
+    display: block;
+}
+.blog-footer li a {
+    color: black;
+}
+
+@media only screen and (max-width: 700px) {
+    .blog-masthead {
+        width: 100%;
+        margin: 0;
+        float: none;
+    }
+    .blog-footer{
+      width: 100%;
+      margin: 0;
+    }
+    .blog-nav li{
+      display: block;
+      float: none;
+      margin: auto;
+      padding: 0;
+      margin: auto;
+      text-align: center;
+    }
+    .blog-nav img{
+    float: none;
+    width: 100%;
+    height: auto;
+   }
+}
